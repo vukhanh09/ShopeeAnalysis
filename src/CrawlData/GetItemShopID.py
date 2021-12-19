@@ -3,7 +3,7 @@ import json
 import pandas as pd
 from tqdm import tqdm
 def getItemShopID(match_id):
-    url_search_item = 'https://shopee.vn/api/v4/search/search_items?by=relevancy&limit=60&match_id={}&newest={}'
+    url_search_item = 'https://shopee.vn/api/v4/search/search_items?by=relevancy&limit=60&match_id={}&newest={0}'
     
     def getItemShopId(data):
         itemId = data['item_basic']['itemid']
