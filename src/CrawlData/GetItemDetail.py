@@ -10,7 +10,7 @@ def getItemDetail(ItemShopId,topic):
         try:
             data = requests.get(url_detail_item.format(a,b)).content
             data = json.loads(data)['data']
-            data['topic'] = topic
+            data['topic'] = str(topic)
             df.extend([data])
         except:
             print('Crawl website error')
